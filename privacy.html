@@ -1,0 +1,110 @@
+<title>Privacy Policy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+:root{
+  --bg:#faf9f7; --fg:#15151f; --fg-muted:#5c5c6b;
+  --accent:#e11d48; --border:#e4e2df; --surface:#ffffff;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+    --accent:#fe2c55; --border:#26263a; --surface:#181826;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+  --accent:#fe2c55; --border:#26263a; --surface:#181826;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:'Inter',system-ui,sans-serif;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+}
+.wrap{max-width:640px;margin:0 auto;padding-block:56px 80px}
+.mark{
+  width:40px;height:40px;border-radius:50%;background:var(--accent);
+  display:flex;align-items:center;justify-content:center;margin-bottom:28px;
+}
+.mark svg{width:14px;height:14px}
+h1{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:clamp(28px,5vw,38px);font-weight:600;line-height:1.1;
+  margin:0 0 6px;text-wrap:balance;
+}
+.updated{color:var(--fg-muted);font-size:14px;margin:0 0 40px}
+h2{
+  font-family:'Space Grotesk',system-ui,sans-serif;
+  font-size:19px;font-weight:600;margin:36px 0 10px;
+}
+p,li{font-size:16px;line-height:1.7;color:var(--fg);max-width:65ch}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin-bottom:6px}
+table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border)}
+th{color:var(--fg-muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.contact{
+  margin-top:48px;padding:20px 22px;border:1px solid var(--border);
+  border-radius:12px;background:var(--surface);
+}
+.contact p{margin:0;font-size:15px;color:var(--fg-muted)}
+.contact strong{color:var(--fg);font-weight:600}
+a.back{
+  color:var(--fg-muted);text-decoration:none;font-size:14px;
+  display:inline-flex;align-items:center;gap:6px;margin-bottom:32px;
+}
+a.back:hover{color:var(--accent)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap">
+
+<div class="wrap">
+  <a class="back" href="index.html">&larr; Clips GTA VI</a>
+  <div class="mark">
+    <svg viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Effective 19 November 2026 — Clips GTA VI</p>
+
+  <h2>1. Overview</h2>
+  <p>Clips GTA VI is a personal, non-commercial tool operated by a single individual to publish
+  short edited clips to one TikTok account. It does not run for other users, does not serve ads,
+  and does not sell or share data with third parties.</p>
+
+  <h2>2. What TikTok data we access</h2>
+  <p>Through TikTok's own login (OAuth), the tool requests only the permission needed to publish
+  videos to the single connected account. It does not read, store, or process data belonging to
+  that account's followers, viewers, or any other TikTok user.</p>
+  <table>
+    <tr><th>Data</th><th>Purpose</th></tr>
+    <tr><td>Content posting permission (OAuth token)</td><td>Upload approved clips to the connected account</td></tr>
+    <tr><td>Basic account identifier</td><td>Confirm the token belongs to the intended account</td></tr>
+  </table>
+
+  <h2>3. What we store</h2>
+  <p>Video files are processed and temporarily cached on a private, self-hosted server while a
+  clip is being prepared and reviewed. The OAuth token for the single connected account is stored
+  on that same private server and is never shared with third parties.</p>
+
+  <h2>4. Retention and deletion</h2>
+  <ul>
+    <li>A clip rejected during manual review is deleted immediately.</li>
+    <li>A clip that is published is kept as a local backup for about 14 days, then deleted
+    automatically — it continues to exist on TikTok itself.</li>
+  </ul>
+
+  <h2>5. What we don't do</h2>
+  <p>No analytics or tracking scripts, no advertising, no data resale, and no access to data
+  beyond what is listed above.</p>
+
+  <h2>6. Changes</h2>
+  <p>This policy may be updated from time to time. The effective date above reflects the latest
+  revision.</p>
+
+  <div class="contact">
+    <p><strong>Contact</strong><br>christiannalonth9@gmail.com</p>
+  </div>
+</div>
