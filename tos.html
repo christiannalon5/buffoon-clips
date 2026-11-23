@@ -1,21 +1,21 @@
 <title>Terms of Service</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" type="image/png" href="icon.png">
 <style>
-/* layout: single centered reading column, quiet editorial page */
 :root{
   --bg:#faf9f7; --fg:#15151f; --fg-muted:#5c5c6b;
-  --accent:#e11d48; --border:#e4e2df; --surface:#ffffff;
+  --accent:#b9960a; --border:#e4e2df; --surface:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-    --accent:#fe2c55; --border:#26263a; --surface:#181826;
+    --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+    --accent:#ffd400; --border:#26263a; --surface:#181826;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-  --accent:#fe2c55; --border:#26263a; --surface:#181826;
+  --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+  --accent:#ffd400; --border:#26263a; --surface:#181826;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -26,11 +26,8 @@ body{
   padding-right:max(16px, env(safe-area-inset-right,0px));
 }
 .wrap{max-width:640px;margin:0 auto;padding-block:56px 80px}
-.mark{
-  width:40px;height:40px;border-radius:50%;background:var(--accent);
-  display:flex;align-items:center;justify-content:center;margin-bottom:28px;
-}
-.mark svg{width:14px;height:14px}
+.mark{width:40px;height:40px;border-radius:12px;overflow:hidden;margin-bottom:28px}
+.mark img{width:100%;height:100%;display:block;object-fit:cover}
 h1{
   font-family:'Space Grotesk',system-ui,sans-serif;
   font-size:clamp(28px,5vw,38px);font-weight:600;line-height:1.1;
@@ -60,36 +57,60 @@ a.back:hover{color:var(--accent)}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap">
 
 <div class="wrap">
-  <a class="back" href="index.html">&larr; Clips GTA VI</a>
-  <div class="mark">
-    <svg viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg>
-  </div>
+  <a class="back" href="index.html">&larr; BuffoonClips</a>
+  <div class="mark"><img src="icon.png" alt="BuffoonClips"></div>
   <h1>Terms of Service</h1>
-  <p class="updated">Effective 19 November 2026 — Clips GTA VI</p>
+  <p class="updated">Effective 23 November 2026 — BuffoonClips</p>
 
   <h2>1. What this service is</h2>
-  <p>Clips GTA VI is a personal, non-commercial automation tool. It locates highlight moments in
-  publicly available GTA VI gameplay videos, edits them into short vertical clips with burned-in
-  captions, and — after a human manually reviews and approves each individual clip — publishes
-  them to a single TikTok account operated by the developer.</p>
+  <p>BuffoonClips is a personal, non-commercial automation tool. It locates highlight moments in
+  publicly available YouTube videos, edits them into short vertical clips with burned-in
+  captions, and delivers them as a draft to a single TikTok account operated by the developer.
+  No clip is ever posted automatically — a human always reviews it first, both before the draft
+  is created and again inside TikTok before publishing.</p>
 
   <h2>2. Who can use it</h2>
   <p>This tool is operated by one individual for one TikTok account. It is not offered as a
-  service to third parties, and no other TikTok account is connected to it without that
-  account owner's explicit authorization through TikTok's own login flow.</p>
+  service to third parties, is not available for signup, and no other TikTok account is
+  connected to it without that account owner's explicit authorization through TikTok's own
+  login flow.</p>
 
-  <h2>3. Source content</h2>
-  <p>Source footage is drawn from publicly available videos and remains the property of its
-  original creators. Clips are short edited excerpts used for highlight/commentary purposes.
-  The tool does not claim ownership of the original footage.</p>
+  <h2>3. Eligibility</h2>
+  <p>This tool is intended for use by its operator only, who confirms they are at least 18 years
+  old and have the authority to connect the TikTok account used with it.</p>
 
-  <h2>4. No warranty</h2>
+  <h2>4. Source content and intellectual property</h2>
+  <p>Source footage is drawn from publicly available YouTube videos and remains the property of
+  its original creators. Clips are short edited excerpts used for highlight/commentary purposes.
+  The tool does not claim ownership of the original footage, does not redistribute full videos,
+  and does not circumvent any access restriction on the source content.</p>
+
+  <h2>5. Acceptable use</h2>
+  <p>The tool must not be used to infringe the rights of any third party, to harass or defame
+  anyone, or to violate TikTok's own Community Guidelines or Terms of Service. The operator is
+  solely responsible for reviewing and approving every clip before it is drafted or published.</p>
+
+  <h2>6. No warranty</h2>
   <p>This tool is provided as-is, with no warranty of uptime, accuracy, or fitness for any
-  particular purpose. It may be modified, paused, or discontinued at any time.</p>
+  particular purpose. It may be modified, paused, or discontinued at any time without notice.</p>
 
-  <h2>5. Changes</h2>
-  <p>These terms may be updated from time to time. Continued use of the tool after a change
-  constitutes acceptance of the updated terms.</p>
+  <h2>7. Limitation of liability</h2>
+  <p>To the maximum extent permitted by law, the operator of this tool is not liable for any
+  indirect, incidental, or consequential damages arising from its use, including but not limited
+  to account restrictions imposed by TikTok or third-party copyright claims on source footage.</p>
+
+  <h2>8. Termination</h2>
+  <p>The operator may stop operating this tool, or revoke its connection to any TikTok account,
+  at any time and without notice.</p>
+
+  <h2>9. Governing law</h2>
+  <p>These terms are governed by the laws of Spain, without regard to its conflict-of-law
+  principles.</p>
+
+  <h2>10. Changes</h2>
+  <p>These terms may be updated from time to time. The effective date above reflects the latest
+  revision. Continued use of the tool after a change constitutes acceptance of the updated
+  terms.</p>
 
   <div class="contact">
     <p><strong>Contact</strong><br>christiannalonth9@gmail.com</p>

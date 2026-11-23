@@ -1,21 +1,21 @@
-<title>Clips GTA VI</title>
+<title>BuffoonClips</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" type="image/png" href="icon.png">
 <style>
-/* layout: quiet one-column marketing/info page, hero + 3-step process + footer links */
 :root{
   --bg:#faf9f7; --fg:#15151f; --fg-muted:#5c5c6b;
-  --accent:#e11d48; --border:#e4e2df; --surface:#ffffff;
+  --accent:#b9960a; --border:#e4e2df; --surface:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-    --accent:#fe2c55; --border:#26263a; --surface:#181826;
+    --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+    --accent:#ffd400; --border:#26263a; --surface:#181826;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-  --accent:#fe2c55; --border:#26263a; --surface:#181826;
+  --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+  --accent:#ffd400; --border:#26263a; --surface:#181826;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -26,11 +26,8 @@ body{
   padding-right:max(16px, env(safe-area-inset-right,0px));
 }
 .wrap{max-width:640px;margin:0 auto;padding-block:56px 72px}
-.mark{
-  width:48px;height:48px;border-radius:50%;background:var(--accent);
-  display:flex;align-items:center;justify-content:center;margin-bottom:28px;
-}
-.mark svg{width:16px;height:16px}
+.mark{width:48px;height:48px;border-radius:14px;overflow:hidden;margin-bottom:28px}
+.mark img{width:100%;height:100%;display:block;object-fit:cover}
 h1{
   font-family:'Space Grotesk',system-ui,sans-serif;
   font-size:clamp(32px,6vw,44px);font-weight:600;line-height:1.08;
@@ -53,7 +50,16 @@ h2{
 }
 .step p{margin:0;font-size:15px;line-height:1.55;color:var(--fg)}
 .step strong{display:block;font-size:15px;margin-bottom:3px;color:var(--fg)}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:48px}
+@media (max-width:480px){.features{grid-template-columns:1fr}}
+.feature{padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--surface)}
+.feature strong{display:block;font-size:14px;margin-bottom:4px;color:var(--fg)}
+.feature p{margin:0;font-size:14px;line-height:1.5;color:var(--fg-muted)}
 .about p{font-size:16px;line-height:1.7;color:var(--fg);max-width:60ch;margin:0 0 14px}
+.faq{margin-bottom:48px}
+.faq-item{margin-bottom:22px}
+.faq-item strong{display:block;font-size:15px;margin-bottom:5px;color:var(--fg)}
+.faq-item p{margin:0;font-size:15px;line-height:1.6;color:var(--fg-muted);max-width:60ch}
 footer{
   margin-top:56px;padding-top:24px;border-top:1px solid var(--border);
   display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center;
@@ -65,37 +71,73 @@ footer .dot{color:var(--border)}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap">
 
 <div class="wrap">
-  <div class="mark">
-    <svg viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg>
-  </div>
-  <h1>Clips GTA VI</h1>
-  <p class="lede">A personal tool that turns long GTA VI gameplay videos into short, vertical
-  highlight clips — with every clip reviewed by a person before it's ever posted.</p>
+  <div class="mark"><img src="icon.png" alt="BuffoonClips"></div>
+  <h1>BuffoonClips</h1>
+  <p class="lede">A personal tool that turns long YouTube videos into short, vertical highlight
+  clips — with every single clip watched and approved by a person before it's ever posted.</p>
 
   <h2>How it works</h2>
   <div class="steps">
     <div class="step">
       <div class="n">01</div>
       <p><strong>Find the highlight</strong>Audio and speech are analyzed to locate the most
-      reactive, exciting moments in a gameplay video.</p>
+      reactive, exciting moments in a long-form video.</p>
     </div>
     <div class="step">
       <div class="n">02</div>
-      <p><strong>Edit the clip</strong>The moment is cropped to vertical video, framed around the
-      streamer's face, and captioned automatically.</p>
+      <p><strong>Edit the clip</strong>The moment is cropped to vertical video, framed around any
+      visible speaker, and captioned automatically.</p>
     </div>
     <div class="step">
       <div class="n">03</div>
       <p><strong>Human review</strong>Every single clip is watched and manually approved or
-      rejected by the developer before anything is posted.</p>
+      rejected by the developer before anything leaves as a draft.</p>
+    </div>
+  </div>
+
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature">
+      <strong>Automatic highlight detection</strong>
+      <p>Combines audio energy and speech analysis to locate moments worth clipping.</p>
+    </div>
+    <div class="feature">
+      <strong>Vertical reframing</strong>
+      <p>Converts widescreen footage to 9:16 without cutting off the subject.</p>
+    </div>
+    <div class="feature">
+      <strong>Auto captions</strong>
+      <p>Burns in readable, word-by-word captions synced to the speech.</p>
+    </div>
+    <div class="feature">
+      <strong>Draft-only delivery</strong>
+      <p>Finished clips are sent to TikTok as a draft — nothing posts without a manual review.</p>
     </div>
   </div>
 
   <h2>About</h2>
   <div class="about">
-    <p>Clips GTA VI is operated by one person for one TikTok account. It is not a public service —
-    no other account connects to it, and no data beyond what's needed to publish an approved clip
-    is collected. See the Privacy Policy for details.</p>
+    <p>BuffoonClips is operated by one individual for one TikTok account. It is not a public
+    service — no other account connects to it, and no data beyond what's needed to prepare and
+    deliver an approved clip is collected. See the Privacy Policy for details.</p>
+  </div>
+
+  <h2>FAQ</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <strong>Does this post automatically to TikTok?</strong>
+      <p>No. Finished clips are delivered to the connected TikTok account as a draft. A person
+      always reviews and taps Publish inside the TikTok app.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Whose videos are used?</strong>
+      <p>Only publicly available YouTube videos. Short excerpts are used for highlight/commentary
+      purposes, and the tool never claims ownership of the original footage.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Can other people use this?</strong>
+      <p>Not currently — it's built and operated by one developer for one TikTok account.</p>
+    </div>
   </div>
 
   <footer>

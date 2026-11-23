@@ -1,20 +1,21 @@
 <title>Privacy Policy</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" type="image/png" href="icon.png">
 <style>
 :root{
   --bg:#faf9f7; --fg:#15151f; --fg-muted:#5c5c6b;
-  --accent:#e11d48; --border:#e4e2df; --surface:#ffffff;
+  --accent:#b9960a; --border:#e4e2df; --surface:#ffffff;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-    --accent:#fe2c55; --border:#26263a; --surface:#181826;
+    --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+    --accent:#ffd400; --border:#26263a; --surface:#181826;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0f0f1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
-  --accent:#fe2c55; --border:#26263a; --surface:#181826;
+  --bg:#0d0b1a; --fg:#f3f2f0; --fg-muted:#9a98a8;
+  --accent:#ffd400; --border:#26263a; --surface:#181826;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -25,11 +26,8 @@ body{
   padding-right:max(16px, env(safe-area-inset-right,0px));
 }
 .wrap{max-width:640px;margin:0 auto;padding-block:56px 80px}
-.mark{
-  width:40px;height:40px;border-radius:50%;background:var(--accent);
-  display:flex;align-items:center;justify-content:center;margin-bottom:28px;
-}
-.mark svg{width:14px;height:14px}
+.mark{width:40px;height:40px;border-radius:12px;overflow:hidden;margin-bottom:28px}
+.mark img{width:100%;height:100%;display:block;object-fit:cover}
 h1{
   font-family:'Space Grotesk',system-ui,sans-serif;
   font-size:clamp(28px,5vw,38px);font-weight:600;line-height:1.1;
@@ -62,45 +60,62 @@ a.back:hover{color:var(--accent)}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap">
 
 <div class="wrap">
-  <a class="back" href="index.html">&larr; Clips GTA VI</a>
-  <div class="mark">
-    <svg viewBox="0 0 24 24" fill="white"><polygon points="6,4 20,12 6,20"/></svg>
-  </div>
+  <a class="back" href="index.html">&larr; BuffoonClips</a>
+  <div class="mark"><img src="icon.png" alt="BuffoonClips"></div>
   <h1>Privacy Policy</h1>
-  <p class="updated">Effective 19 November 2026 — Clips GTA VI</p>
+  <p class="updated">Effective 23 November 2026 — BuffoonClips</p>
 
   <h2>1. Overview</h2>
-  <p>Clips GTA VI is a personal, non-commercial tool operated by a single individual to publish
-  short edited clips to one TikTok account. It does not run for other users, does not serve ads,
-  and does not sell or share data with third parties.</p>
+  <p>BuffoonClips is a personal, non-commercial tool operated by a single individual to prepare
+  and deliver short edited clips, as drafts, to one TikTok account. It does not run for other
+  users, does not serve ads, and does not sell or share data with third parties.</p>
 
   <h2>2. What TikTok data we access</h2>
-  <p>Through TikTok's own login (OAuth), the tool requests only the permission needed to publish
-  videos to the single connected account. It does not read, store, or process data belonging to
-  that account's followers, viewers, or any other TikTok user.</p>
+  <p>Through TikTok's own login (OAuth), the tool requests only the permissions needed to
+  identify the connected account and upload a video as a draft. It does not read, store, or
+  process data belonging to that account's followers, viewers, or any other TikTok user.</p>
   <table>
     <tr><th>Data</th><th>Purpose</th></tr>
-    <tr><td>Content posting permission (OAuth token)</td><td>Upload approved clips to the connected account</td></tr>
+    <tr><td>Upload-as-draft permission (OAuth token)</td><td>Deliver approved clips to the connected account as a draft</td></tr>
     <tr><td>Basic account identifier</td><td>Confirm the token belongs to the intended account</td></tr>
   </table>
 
   <h2>3. What we store</h2>
   <p>Video files are processed and temporarily cached on a private, self-hosted server while a
-  clip is being prepared and reviewed. The OAuth token for the single connected account is stored
-  on that same private server and is never shared with third parties.</p>
+  clip is being prepared and reviewed. The OAuth access token and refresh token for the single
+  connected account are stored on that same private server and are never shared with third
+  parties.</p>
 
   <h2>4. Retention and deletion</h2>
   <ul>
     <li>A clip rejected during manual review is deleted immediately.</li>
-    <li>A clip that is published is kept as a local backup for about 14 days, then deleted
-    automatically — it continues to exist on TikTok itself.</li>
+    <li>A clip that is delivered as a draft is kept as a local backup for about 14 days after
+    being marked as published, then deleted automatically — it continues to exist on TikTok
+    itself.</li>
+    <li>Source video/audio downloaded to generate a clip is deleted once it is no longer
+    needed to produce further clips from that video.</li>
   </ul>
 
-  <h2>5. What we don't do</h2>
+  <h2>5. Your rights</h2>
+  <p>Since the only TikTok account connected to this tool belongs to its own operator, data
+  subject requests (access, correction, deletion) are handled directly by that same person. You
+  can revoke this tool's access at any time from TikTok's own account settings
+  (Settings → Security → Manage account → Apps and websites access), which immediately
+  invalidates its stored tokens.</p>
+
+  <h2>6. Children's privacy</h2>
+  <p>This tool is not directed at children and is not available for signup by anyone other than
+  its operator.</p>
+
+  <h2>7. International data transfer</h2>
+  <p>The server that processes and stores data for this tool is located in Spain (EU). No data
+  is transferred outside of what TikTok's own API requires to operate the connected account.</p>
+
+  <h2>8. What we don't do</h2>
   <p>No analytics or tracking scripts, no advertising, no data resale, and no access to data
   beyond what is listed above.</p>
 
-  <h2>6. Changes</h2>
+  <h2>9. Changes</h2>
   <p>This policy may be updated from time to time. The effective date above reflects the latest
   revision.</p>
 
